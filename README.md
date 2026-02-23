@@ -2,14 +2,14 @@
 
 ## Problem Statement
 
-Today, the Fedimint SDK provides first-class support for **web/browser** and **React Native** environments. However, developers building **native Android (Kotlin)** or **native iOS (Swift)** apps currently have no published, idiomatic SDK to work with. They must either:
+Today, the Fedimint SDK provides support for **web/browser** and **React Native** environments. However, developers building **native Android (Kotlin)** or **native iOS (Swift)** apps currently have no published, idiomatic SDK to work with. They must either:
 
 1. Use the React Native bridge (adding unnecessary complexity for native apps), or
 2. Manually integrate raw Rust FFI, which is error-prone and undocumented.
 
 This limits Fedimint's reach in the mobile ecosystem, where native apps remain the dominant approach for production-grade Bitcoin/Lightning wallets.
 
-Additionally, with the recently merged `fedimint-client-rpc` ([PR #7499](https://github.com/fedimint/fedimint/pull/7499)), the Fedimint client now supports **multiple wallet instances** — but this capability is not yet surfaced in any mobile SDK.
+Additionally, with the recently merged `fedimint-client-rpc` ([PR #7499](https://github.com/fedimint/fedimint/pull/7499)), the Fedimint client now supports **multiple wallet instances** — but this capability is not yet surfaced in the SDK.
 
 ---
 
