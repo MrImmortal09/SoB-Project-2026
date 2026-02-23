@@ -87,7 +87,7 @@ The `bdk-ffi` project demonstrates this exact pattern successfully:
 
 - **UniFFI (mozilla/uniffi-rs):** Generate idiomatic Kotlin and Swift from annotated Rust code
 - **Build system:** Extend existing Nix flake from fedimint-sdk with `just` task runner (following bdk-ffi conventions)
-- **Android targets:** `aarch64-linux-android`, `armv7-linux-androideabi`, `x86_64-linux-android` via Android NDK
+- **Android targets:** `aarch64-linux-android`, `x86_64-linux-android` via Android NDK
 - **Apple targets:** `aarch64-apple-ios`, `aarch64-apple-ios-sim`, `x86_64-apple-ios`, `aarch64-apple-darwin`, `x86_64-apple-darwin`
 - **CI/CD:** GitHub Actions for automated builds, tests, and artifact publishing
 - **Testing:** Android instrumented tests (emulator), Swift XCTest, integration tests against local Fedimint federation
