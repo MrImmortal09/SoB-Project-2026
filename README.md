@@ -51,35 +51,6 @@ The `bdk-ffi` project demonstrates this exact pattern successfully:
 
 ---
 
-## Deliverables
-
-### Phase 1: Native Bindings Foundation (Weeks 1–5)
-- [ ] Create `fedimint-ffi` Rust crate wrapping the Fedimint client for UniFFI export
-- [ ] Build Android bindings (`fedimint-android`):
-  - Cross-compile for `aarch64-linux-android`, `x86_64-linux-android`
-  - Package as `.aar` with Gradle build
-  - Publish to Maven Central (or snapshot repo)
-- [ ] Build Swift bindings (`fedimint-swift`):
-  - Cross-compile for iOS (aarch64), iOS Simulator (aarch64 + x86_64), macOS
-  - Package as XCFramework
-  - Publish via Swift Package Manager
-
-### Phase 2: Multi-Wallet Support (Weeks 6–8)
-- [ ] Expose `fedimint-client-rpc` multi-wallet capabilities through the native bindings
-  - Create/manage multiple wallet instances per app
-  - Independent federation joins per wallet
-  - Wallet-scoped operations (send, receive, balance)
-- [ ] Build example apps demonstrating multi-wallet on Android and iOS
-
-### Phase 3: Documentation, Testing & Polish (Weeks 9–12)
-- [ ] Comprehensive API documentation (KDoc for Kotlin, DocC for Swift)
-- [ ] Integration test suites (Android instrumented tests, Swift XCTest)
-- [ ] Example wallet apps for both platforms
-- [ ] CI/CD pipelines for automated builds and releases
-- [ ] Migration guide for developers moving from React Native to native
-
----
-
 ## Prior Art & Experience
 
 ### 1. `fedimint-client-rpc` ([PR #7499](https://github.com/fedimint/fedimint/pull/7499))
