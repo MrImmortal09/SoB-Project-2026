@@ -20,33 +20,32 @@ Build and publish **native Android (Kotlin) and Swift bindings** for the Fedimin
 ### Architecture (Inspired by bdk-ffi)
 
 ```
-┌─────────────────────────────────────────────┐
-│              fedimint-ffi (Rust)             │
-│  Wrapper around fedimint-client exposing     │
-│  APIs via mozilla/uniffi-rs                  │
-├─────────────────────────────────────────────┤
-│          UniFFI Binding Generation           │
-├──────────────────┬──────────────────────────┤
-│  fedimint-android│     fedimint-swift        │
-│  (Kotlin/.aar)   │   (Swift/XCFramework)     │
-│                  │                           │
-│  • Gradle build  │   • SPM package           │
-│  • Maven Central │   • GitHub releases       │
-│  • Android NDK   │   • iOS + macOS + Sim     │
-│    cross-compile │     cross-compile         │
-└──────────────────┴──────────────────────────┘
-```
++-------------------------------------------------------------+
+|                 fedimint-client-uniffi (Rust)               |
+|   Wrapper around fedimint-client exposing APIs via          |
+|   mozilla/uniffi-rs                                         |
++-------------------------------------------------------------+
+|                   UniFFI Binding Generation                 |
++----------------------------+--------------------------------+
+|       fedimint-android     |        fedimint-swift          |
+|        (Kotlin / .aar)     |      (Swift / XCFramework)     |
+|                            |                                |
+|  • Gradle build            |  • SPM package                 |
+|  • Maven Central           |  • GitHub releases             |
+|  • Android NDK             |  • iOS + macOS + Simulator     |
+|    cross-compile           |    cross-compile               |
++----------------------------+--------------------------------+
 
+```
 ### Key reference: bdk-ffi structure
 
 The `bdk-ffi` project demonstrates this exact pattern successfully:
 
-| Component | bdk-ffi (Reference) | fedimint-ffi (Proposed) |
+| Component | bdk-ffi (Reference) | fedimint-sdk-ffi (Proposed) |
 |-----------|---------------------|-------------------------|
-| Rust FFI wrapper | `bdk-ffi/` | `fedimint-ffi/` |
-| Android bindings | `bdk-android/` (.aar, Gradle, Maven Central) | `fedimint-android/` |
-| Swift bindings | `bdk-swift/` (XCFramework, SPM) | `fedimint-swift/` |
-| Binding generator | mozilla/uniffi-rs | mozilla/uniffi-rs |
+| Android bindings | `bdk-android/` (.aar, Gradle, Maven Central) | `fedimint-android/`(inside fedimint-sdk-ffi itself) |
+| Swift bindings | `bdk-swift/` (XCFramework, SPM) | `fedimint-swift/`(inside fedimint-sdk-ffi itself) |
+| Binding generator | mozilla/uniffi-rs | mozilla/uniffi-rs(fedimint-client-uniffi) |
 | Build tooling | `just` + shell scripts | Nix flake + `just` + shell scripts |
 
 ---
