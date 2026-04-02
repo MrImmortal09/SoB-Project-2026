@@ -106,10 +106,4 @@ The `bdk-ffi` project demonstrates this exact pattern successfully:
 | 9–10 | Testing infrastructure, CI/CD pipelines |
 | 11–12 | Documentation, polish, release prep |
 
-
-## Author
-**MrImmortal09** — Previous SoB intern with Fedimint  
-- Shipped [`fedimint-client-rpc`](https://github.com/fedimint/fedimint/pull/7499) (merged July 2025), enabling multi-wallet support in the Fedimint client
-- Built the [`@fedimint/react-native`](https://github.com/fedimint/fedimint-sdk/pull/239) package, bringing UniFFI-based native bindings to React Native
-
 ---
