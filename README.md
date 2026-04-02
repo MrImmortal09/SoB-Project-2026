@@ -50,30 +50,6 @@ The `bdk-ffi` project demonstrates this exact pattern successfully:
 
 ---
 
-## Prior Art & Experience
-
-### 1. `fedimint-client-rpc` ([PR #7499](https://github.com/fedimint/fedimint/pull/7499))
-- **Status:** ✅ Merged (July 15, 2025)
-- Introduced the RPC layer with `fedimint-cursed-redb` storage
-- Enables multiple wallet instances — the backend foundation for multi-wallet mobile support
-- 648 additions, 604 deletions across 7 files
-- 38 review comments, thoroughly reviewed by maintainers
-
-### 2. `@fedimint/react-native` ([PR #239](https://github.com/fedimint/fedimint-sdk/pull/239))
-- **Status:** 🔄 Open / In Review
-- Already uses UniFFI bindings to compile the Fedimint client to native libraries (iOS & Android)
-- Implements transport layer, device persistence (`dbPath`), and TypeScript interface
-- 19,202 additions across 122 files — substantial cross-platform build infrastructure
-- Much of the UniFFI and cross-compilation work here is **directly reusable** for standalone native bindings
-
-### 3. Reference: `bitcoindevkit/bdk-ffi`
-- Mature, production-grade example of the exact pattern proposed
-- Supports Kotlin (Android), Swift (iOS/macOS), with additional JVM and Python bindings
-- 118 stars, actively maintained, published on Maven Central and SPM
-- Proves the UniFFI-based approach works well for Bitcoin ecosystem Rust libraries
-
----
-
 ## Why This Project Matters
 
 1. **Native-first mobile apps** remain the standard for production Bitcoin wallets (e.g., Mutiny, Zeus, BlueWallet all ship native)
