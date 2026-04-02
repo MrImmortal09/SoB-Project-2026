@@ -93,17 +93,3 @@ The `bdk-ffi` project demonstrates this exact pattern successfully:
 - **Testing:** Android instrumented tests (emulator), Swift XCTest, integration tests against local Fedimint federation
 
 ---
-
-## Timeline
-
-| Week | Milestone |
-|------|-----------|
-| 1–2 | Set up `fedimint-ffi` crate, UniFFI annotations, basic Kotlin/Swift generation |
-| 3–4 | Android cross-compilation, `.aar` packaging, Gradle setup |
-| 5 | Swift XCFramework, SPM packaging, iOS build scripts |
-| 6–7 | Multi-wallet API surface in native bindings |
-| 8 | Example apps (Android + iOS) with multi-wallet demo |
-| 9–10 | Testing infrastructure, CI/CD pipelines |
-| 11–12 | Documentation, polish, release prep |
-
----
